@@ -65,14 +65,19 @@
     <Content Include="img\F.jpg" />
     <Content Include="img\G.jpg" />
     <Content Include="img\H.jpg" />
-    <Content Include="img\nav_next.png" />
-    <Content Include="img\pag_normal.png" />
-    <Content Include="img\pag_active.png" />
-    <Content Include="img\pag_hover.png" />
-    <Content Include="img\nav_prev.png" />
     <Content Include="index.html" />
+    <Content Include="JavaScript1.js" />
+    <Content Include="JavaScript1.min.js">
+      <DependentUpon>JavaScript1.js</DependentUpon>
+    </Content>
     <Content Include="jquery.slides.min.js" />
     <Content Include="packages.config" />
+    <Content Include="index.min.html">
+      <DependentUpon>index.html</DependentUpon>
+    </Content>
+    <Content Include="JavaScript1.min.js.map">
+      <DependentUpon>JavaScript1.js</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
