@@ -68,9 +68,6 @@
     <Content Include="index.html" />
     <Content Include="jquery.slides.min.js" />
     <Content Include="packages.config" />
-    <Content Include="index.min.html">
-      <DependentUpon>index.html</DependentUpon>
-    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
