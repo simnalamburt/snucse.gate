@@ -57,8 +57,24 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="img\A.jpg" />
+    <Content Include="img\B.jpg" />
+    <Content Include="bgm.mp3" />
+    <Content Include="img\C.jpg" />
+    <Content Include="img\D.jpg" />
+    <Content Include="img\E.jpg" />
+    <Content Include="img\F.jpg" />
+    <Content Include="img\G.jpg" />
+    <Content Include="img\H.jpg" />
     <Content Include="index.html" />
+    <Content Include="jquery.slides.min.js" />
+    <Content Include="packages.config" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Web.Debug.config">

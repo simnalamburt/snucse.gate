@@ -1,9 +1,35 @@
 ﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
-    <title></title>
+    <meta charset="utf-8">
+    <title>Frontpage for SNUCSE 13</title>
+    <style>
+        #slides {
+            display: none;
+        }
+    </style>
 </head>
 <body>
+    <div id="slides">
+        <img src="img/A.jpg" alt="" />
+        <img src="img/B.jpg" alt="" />
+        <img src="img/C.jpg" alt="" />
+        <img src="img/D.jpg" alt="" />
+        <img src="img/E.jpg" alt="" />
+        <img src="img/F.jpg" alt="" />
+        <img src="img/G.jpg" alt="" />
+        <img src="img/H.jpg" alt="" />
+    </div>
     
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="jquery.slides.min.js"></script>
+    <script>
+        $(function () {
+            $("#slides").slidesjs({
+                width: 800, height: 500,
+                navigation: { active: true, effect: "fade" }
+            });
+        });
+    </script>
 </body>
 </html>
