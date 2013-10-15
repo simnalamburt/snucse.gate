@@ -57,40 +57,27 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="css\example.css" />
-    <Content Include="css\font-awesome.min.css" />
-    <Content Include="font\fontawesome-webfont.svg" />
     <Content Include="img\A.jpg" />
     <Content Include="img\B.jpg" />
-    <Content Include="bgm.mp3" />
     <Content Include="img\C.jpg" />
     <Content Include="img\D.jpg" />
     <Content Include="img\E.jpg" />
     <Content Include="img\F.jpg" />
     <Content Include="img\G.jpg" />
     <Content Include="img\H.jpg" />
-    <Content Include="img\pagination.png" />
+    <Content Include="img\nav_next.png" />
+    <Content Include="img\pag_normal.png" />
+    <Content Include="img\pag_active.png" />
+    <Content Include="img\pag_hover.png" />
+    <Content Include="img\nav_prev.png" />
     <Content Include="index.html" />
     <Content Include="jquery.slides.min.js" />
     <Content Include="packages.config" />
-    <Content Include="font\fontawesome-webfont.eot" />
-    <Content Include="font\fontawesome-webfont.ttf" />
-    <Content Include="font\fontawesome-webfont.woff" />
-    <Content Include="font\FontAwesome.otf" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-    <None Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
