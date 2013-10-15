@@ -57,6 +57,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\example.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="font\fontawesome-webfont.svg" />
     <Content Include="img\A.jpg" />
     <Content Include="img\B.jpg" />
     <Content Include="bgm.mp3" />
@@ -66,9 +69,14 @@
     <Content Include="img\F.jpg" />
     <Content Include="img\G.jpg" />
     <Content Include="img\H.jpg" />
+    <Content Include="img\pagination.png" />
     <Content Include="index.html" />
     <Content Include="jquery.slides.min.js" />
     <Content Include="packages.config" />
+    <Content Include="font\fontawesome-webfont.eot" />
+    <Content Include="font\fontawesome-webfont.ttf" />
+    <Content Include="font\fontawesome-webfont.woff" />
+    <Content Include="font\FontAwesome.otf" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
