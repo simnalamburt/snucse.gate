@@ -1,92 +1,92 @@
 ﻿<!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8">
     <title>Frontpage for SNUCSE 13</title>
     <meta name="description" content="스누씨 13 대문페이지 소스">
     <meta name="author" content="Hyeon Kim">
     <style>
-        body {
-            margin: 0;
-        }
-        
-        #slides {
-            position: relative;
-            display: none;
-        }
+    body {
+      margin: 0;
+    }
 
-        #slides a {
-            outline: none;
-        }
+    #slides {
+      position: relative;
+      display: none;
+    }
 
-        #slides .slidesjs-navigation {
-            position: absolute;
-            width: 30px; top: 0; height: 100%;
-            z-index: 11;
+    #slides a {
+      outline: none;
+    }
 
-            -webkit-transition: background-color 0.3s;
-            -moz-transition: background-color 0.3s;
-            -o-transition: background-color 0.3s;
-            transition: background-color 0.3s;
-        }
-        #slides .slidesjs-navigation:hover { background-color: rgba(0, 0, 0, 0.5); }
-        #slides .slidesjs-navigation.slidesjs-previous { left: 0; }
-        #slides .slidesjs-navigation.slidesjs-next { right: 0; }
+    #slides .slidesjs-navigation {
+      position: absolute;
+      width: 30px; top: 0; height: 100%;
+      z-index: 11;
 
-        .icon {
-            display: block;
-            position: relative;
-            left: 50%; margin-left: -7.5px;
-            top: 50%; margin-top: -11.5px;
-            width: 15px; height: 23px;
-        }
-        .icon.prev { background-image: url('prev.png'); }
-        .icon.next { background-image: url('next.png'); }
+      -webkit-transition: background-color 0.3s;
+      -moz-transition: background-color 0.3s;
+      -o-transition: background-color 0.3s;
+      transition: background-color 0.3s;
+    }
+    #slides .slidesjs-navigation:hover { background-color: rgba(0, 0, 0, 0.5); }
+    #slides .slidesjs-navigation.slidesjs-previous { left: 0; }
+    #slides .slidesjs-navigation.slidesjs-next { right: 0; }
 
-        #slides .slidesjs-pagination {
-            position: absolute;
-            left: 50%; margin-left: -60px;
-            bottom: 5px; height: 0px;
-            list-style: none; padding: 0;
-            z-index: 11;
-        }
-        #slides .slidesjs-pagination li { padding: 0 1px; float: left; }
-        #slides .slidesjs-pagination a {
-            display: block;
-            width: 13px; height: 0;
-            padding-top: 13px; overflow: hidden;
-            float: left;
-            background-image: url('bkground.png');
-        }
-        #slides .slidesjs-pagination a.active,
-        #slides .slidesjs-pagination a.active:hover { background-image: url('active-hover.png'); }
-        #slides .slidesjs-pagination a:hover { background-image: url('hover.png'); }
+    .icon {
+      display: block;
+      position: relative;
+      left: 50%; margin-left: -7.5px;
+      top: 50%; margin-top: -11.5px;
+      width: 15px; height: 23px;
+    }
+    .icon.prev { background-image: url('prev.png'); }
+    .icon.next { background-image: url('next.png'); }
+
+    #slides .slidesjs-pagination {
+      position: absolute;
+      left: 50%; margin-left: -60px;
+      bottom: 5px; height: 0px;
+      list-style: none; padding: 0;
+      z-index: 11;
+    }
+    #slides .slidesjs-pagination li { padding: 0 1px; float: left; }
+    #slides .slidesjs-pagination a {
+      display: block;
+      width: 13px; height: 0;
+      padding-top: 13px; overflow: hidden;
+      float: left;
+      background-image: url('bkground.png');
+    }
+    #slides .slidesjs-pagination a.active,
+    #slides .slidesjs-pagination a.active:hover { background-image: url('active-hover.png'); }
+    #slides .slidesjs-pagination a:hover { background-image: url('hover.png'); }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div id="slides">
-        <img src="img/A.jpg"/>
-        <img src="img/B.jpg"/>
-        <img src="img/C.jpg"/>
-        <img src="img/D.jpg"/>
-        <img src="img/E.jpg"/>
-        <img src="img/F.jpg"/>
-        <img src="img/G.jpg"/>
-        <img src="img/H.jpg"/>
-        <a href="#" class="slidesjs-navigation slidesjs-previous"><i class="icon prev"></i></a>
-        <a href="#" class="slidesjs-navigation slidesjs-next"><i class="icon next"></i></a>
+      <img src="img/A.jpg"/>
+      <img src="img/B.jpg"/>
+      <img src="img/C.jpg"/>
+      <img src="img/D.jpg"/>
+      <img src="img/E.jpg"/>
+      <img src="img/F.jpg"/>
+      <img src="img/G.jpg"/>
+      <img src="img/H.jpg"/>
+      <a href class="slidesjs-navigation slidesjs-previous"><i class="icon prev"></i></a>
+      <a href class="slidesjs-navigation slidesjs-next"><i class="icon next"></i></a>
     </div>
-    
+
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="jquery.slides.min.js"></script>
     <script>
-        $(function () {
-            $('#slides').slidesjs({
-                width: 800, height: 450,
-                start: 4,
-                navigation: false,
-            });
-        });
+    $(function () {
+      $('#slides').slidesjs({
+        width: 800, height: 450,
+        start: 4,
+        navigation: false,
+      });
+    });
     </script>
-</body>
+  </body>
 </html>
