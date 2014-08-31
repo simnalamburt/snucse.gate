@@ -1,0 +1,6 @@
+{ "name": "snucse13"
+, "dependencies":
+  { "jquery": "^1.11.1"
+  , "slidejs3": "*"
+  }
+}
