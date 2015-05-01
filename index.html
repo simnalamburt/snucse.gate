@@ -59,14 +59,6 @@
 <h1>In memory of...</h1>
 <ul>
   <script>
-  if (!String.prototype.format) {
-    String.prototype.format = function() {
-      var args = arguments;
-      var counter = 0;
-      return this.replace(/{}/g, function(match) { return args[counter++]; });
-    };
-  }
-
   [
     { name: '임동엽', date: new Date('11/08/2015') },
     { name: '이석진', date: new Date('06/16/2016') },
@@ -76,9 +68,14 @@
     { name: '허성현', date: new Date('01/24/2017') }
   ].forEach(function(obj) {
     var delta = Math.floor((obj.date - new Date())/1000/60/60/24) - 1;
-    document.write('<li>{}<br>D-{}<br><small>{}-{}-{}</small></li>'.format(obj.name, delta,
-      obj.date.getFullYear(), obj.date.getMonth() + 1, obj.date.getDate()));
-    });
+    document.write(format('<li>{}<br>D-{}<br><small>{}-{}-{}</small></li>',
+      obj.name, delta, obj.date.getFullYear(), obj.date.getMonth() + 1, obj.date.getDate()));
+  });
+
+  function format(fmt) {
+    var args = arguments, counter = 0;
+    return fmt.replace(/{}/g, function(match) { return args[++counter]; });
+  };
   </script>
 </ul>
 
