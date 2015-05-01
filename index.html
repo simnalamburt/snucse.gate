@@ -27,6 +27,11 @@
       <!-- BEGIN -->
 
 <style>
+#gate13 {
+  text-align: center;
+  padding-bottom: 50px;
+}
+
 #gate13 img {
   display: block;
   margin: 0 auto;
@@ -40,7 +45,6 @@
 #gate13 li {
   width: 128px;
   display: inline-block;
-  text-align: center;
 }
 </style>
 <div id=gate13>
@@ -72,7 +76,7 @@
     { name: '허성현', date: new Date('01/24/2017') }
   ].forEach(function(obj) {
     var delta = Math.floor((obj.date - new Date())/1000/60/60/24) - 1;
-    document.write('<li>{}<br>D-{}<br>{}-{}-{}</li>'.format(obj.name, delta,
+    document.write('<li>{}<br>D-{}<br><small>{}-{}-{}</small></li>'.format(obj.name, delta,
       obj.date.getFullYear(), obj.date.getMonth() + 1, obj.date.getDate()));
     });
   </script>
