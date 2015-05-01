@@ -58,9 +58,8 @@
   if (!String.prototype.format) {
     String.prototype.format = function() {
       var args = arguments;
-      return this.replace(/{(\d+)}/g, function(match, number) {
-        return typeof args[number] != 'undefined' ? args[number] : match;
-      });
+      var counter = 0;
+      return this.replace(/{}/g, function(match) { return args[counter++]; });
     };
   }
 
@@ -73,7 +72,7 @@
     { name: '허성현', date: new Date('01/24/2017') }
   ].forEach(function(obj) {
     var delta = Math.floor((obj.date - new Date())/1000/60/60/24) - 1;
-    document.write('<li>{0}<br>D-{1}<br>{2}-{3}-{4}</li>'.format(obj.name, delta,
+    document.write('<li>{}<br>D-{}<br>{}-{}-{}</li>'.format(obj.name, delta,
       obj.date.getFullYear(), obj.date.getMonth() + 1, obj.date.getDate()));
     });
   </script>
