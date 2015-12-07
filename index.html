@@ -67,14 +67,16 @@
 <ul>
   <script>
   [
-    { name: '임동엽', date: new Date('11/08/2015') },
+    { name: '임동엽', date: new Date('02/08/2016') },
     { name: '이석진', date: new Date('06/16/2016') },
     { name: '임지헌', date: new Date('11/23/2016') },
     { name: '이창영', date: new Date('12/22/2016') },
-    { name: '황재동', date: new Date('01/14/2017') },
-    { name: '허성현', date: new Date('01/24/2017') }
+    { name: '황재동', date: new Date('01/15/2017') },
+    { name: '허성현', date: new Date('01/24/2017') },
+    { name: '박수빈', date: new Date('08/22/2017') },
+    { name: '박상혁', date: new Date('10/07/2017') }
   ].forEach(function(obj) {
-    var delta = Math.floor((obj.date - new Date())/1000/60/60/24) - 1;
+    var delta = Math.floor((obj.date - new Date())/1000/60/60/24) + 1;
     document.write(format('<li>{}<br>D-{}<br><small>{}-{}-{}</small></li>',
       obj.name, delta, obj.date.getFullYear(), obj.date.getMonth() + 1, obj.date.getDate()));
   });
