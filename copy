@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+Dir.chdir File.dirname __FILE__
+
+content = File.read('index.html')
+  .split('<!-- BEGIN -->')[1]
+  .split('<!-- END -->')[0]
+  .strip
+
+IO.popen('pbcopy', 'w') { |f| f << content }
+
+puts <<OUTPUT
+
+복사되었습니다!
+대문 게시물 링크:
+
+    https://www.snucse.org/Board/WriteForm.aspx?action=modify&article_uid=412678
+
+OUTPUT
