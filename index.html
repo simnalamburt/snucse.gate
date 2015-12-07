@@ -38,12 +38,12 @@
   margin: 0 auto;
 }
 
-#gate13 ul {
+#gate13 > ul {
   margin: 0;
   padding: 0;
 }
 
-#gate13 li {
+#gate13 > ul > li {
   width: 160px;
   padding: 5px 0;
   display: inline-block;
@@ -68,23 +68,26 @@
 <ul>
   <script>
   [
-    { name: '임동엽', date: new Date('02/08/2016') },
-    { name: '이석진', date: new Date('06/16/2016') },
-    { name: '임지헌', date: new Date('11/23/2016') },
-    { name: '이창영', date: new Date('12/22/2016') },
-    { name: '황재동', date: new Date('01/15/2017') },
-    { name: '허성현', date: new Date('01/24/2017') },
-    { name: '박수빈', date: new Date('08/22/2017') },
-    { name: '박상혁', date: new Date('10/07/2017') }
-  ].forEach(function(obj) {
-    var delta = Math.floor((obj.date - new Date())/1000/60/60/24) + 1;
-    document.write(format('<li>{}<br>D-{}<br><small>{}-{}-{}</small></li>',
-      obj.name, delta, obj.date.getFullYear(), obj.date.getMonth() + 1, obj.date.getDate()));
+    { name: '임동엽', end: '02/08/2016' },
+    { name: '이석진', end: '06/16/2016' },
+    { name: '임지헌', end: '11/23/2016' },
+    { name: '이창영', end: '12/22/2016' },
+    { name: '황재동', end: '01/15/2017' },
+    { name: '허성현', end: '01/24/2017' },
+    { name: '박수빈', end: '08/22/2017' },
+    { name: '박상혁', end: '10/07/2017' }
+  ].forEach(function(data) {
+    var end = new Date(data.end);
+    var delta = Math.floor((end - new Date())/1000/60/60/24) + 1;
+    var html = format('<li>{}<br>D-{}<br><small>{}-{}-{}</small></li>',
+        data.name, delta, end.getFullYear(), end.getMonth() + 1, end.getDate());
+
+    document.write(html);
   });
 
   function format(fmt) {
     var args = arguments, counter = 0;
-    return fmt.replace(/{}/g, function(match) { return args[++counter]; });
+    return fmt.replace(/{}/g, function(_) { return args[++counter]; });
   };
   </script>
 </ul>
