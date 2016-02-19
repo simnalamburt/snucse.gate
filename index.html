@@ -67,7 +67,7 @@
 <p style="margin: 1em 0">In memory of...</p>
 <ul>
   <script>
-  [
+  var data = [
     { name: '임동엽', end: '02/08/2016' },
     { name: '이석진', end: '06/16/2016' },
     { name: '임지헌', end: '11/23/2016' },
@@ -79,23 +79,29 @@
     { name: '박충훈', end: '12/13/2017' },
     { name: '이주상', end: '03/01/2017' },
     { name: '정석원', end: '05/03/2017' },
-  ].forEach(function(data) {
-    var end = new Date(data.end);
+  ];
+
+  // Printf-like utility function.
+  // This if for IE which doesn't support ES2015 template string
+  function format(fmt) {
+    var args = arguments, counter = 0;
+    return fmt.replace(/{}/g, function(_) { return args[++counter]; });
+  };
+
+  // document.write() the DOMs
+  data.forEach(function(entry) {
+    var end = new Date(entry.end);
     var delta = Math.floor((end - new Date())/1000/60/60/24) + 1;
     var dday;
     if (delta == 0) { dday = 'D-day'; }
     else if (delta > 0) { dday = 'D-' + delta; }
     else { dday = 'D+' + (-delta); }
+
     var html = format('<li>{}<br>{}<br><small>{}-{}-{}</small></li>',
-        data.name, dday, end.getFullYear(), end.getMonth() + 1, end.getDate());
+        entry.name, dday, end.getFullYear(), end.getMonth() + 1, end.getDate());
 
     document.write(html);
   });
-
-  function format(fmt) {
-    var args = arguments, counter = 0;
-    return fmt.replace(/{}/g, function(_) { return args[++counter]; });
-  };
   </script>
 </ul>
 
