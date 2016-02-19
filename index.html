@@ -82,8 +82,12 @@
   ].forEach(function(data) {
     var end = new Date(data.end);
     var delta = Math.floor((end - new Date())/1000/60/60/24) + 1;
-    var html = format('<li>{}<br>D-{}<br><small>{}-{}-{}</small></li>',
-        data.name, delta, end.getFullYear(), end.getMonth() + 1, end.getDate());
+    var dday;
+    if (delta == 0) { dday = 'D-day'; }
+    else if (delta > 0) { dday = 'D-' + delta; }
+    else { dday = 'D+' + (-delta); }
+    var html = format('<li>{}<br>{}<br><small>{}-{}-{}</small></li>',
+        data.name, dday, end.getFullYear(), end.getMonth() + 1, end.getDate());
 
     document.write(html);
   });
