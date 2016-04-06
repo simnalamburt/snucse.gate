@@ -48,6 +48,8 @@
   padding: 5px 0;
   display: inline-block;
 }
+
+#gate13 > ul > li.done { color: green; }
 </style>
 <div id=gate13>
 
@@ -95,12 +97,14 @@
     var end = new Date(entry.end);
     var delta = Math.floor((end - new Date())/1000/60/60/24) + 1;
     var dday;
+
     if (delta == 0) { dday = 'D-day'; }
     else if (delta > 0) { dday = 'D-' + delta; }
     else { dday = 'D+' + (-delta); }
 
-    var html = format('<li>{}<br>{}<br><small>{}-{}-{}</small></li>',
-        entry.name, dday, end.getFullYear(), end.getMonth() + 1, end.getDate());
+    var html = format('<li{}>{}<br>{}<br><small>{}-{}-{}</small></li>',
+        delta < 0 ? ' class=done' : '', entry.name, dday,
+        end.getFullYear(), end.getMonth() + 1, end.getDate());
 
     document.write(html);
   });
