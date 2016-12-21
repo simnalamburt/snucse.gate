@@ -69,21 +69,25 @@
 <p style="margin: 1em 0">In memory of...</p>
 <ul>
   <script>
+  "use strict";
+
   var data = [
     { name: '임동엽', end: '02/16/2016' },
     { name: '이석진', end: '06/16/2016' },
     { name: '임지헌', end: '11/23/2016' },
-    { name: '이창영', end: '12/22/2016' },
+    { name: '김정환', end: '12/21/2016' },
+    { name: '이창영', end: '12/21/2016' },
     { name: '황재동', end: '01/15/2017' },
     { name: '허성현', end: '01/24/2017' },
+    { name: '이주상', end: '03/01/2017' },
+    { name: '정석원', end: '05/03/2017' },
     { name: '박수빈', end: '08/22/2017' },
     { name: '박상혁', end: '10/07/2017' },
     { name: '박충훈', end: '12/13/2017' },
-    { name: '이주상', end: '03/01/2017' },
-    { name: '정석원', end: '05/03/2017' },
     { name: '신동빈', end: '02/14/2018' },
     { name: '이승민', end: '06/05/2018' },
     { name: '김경문', end: '07/17/2018' },
+    { name: '허정수', end: '09/03/2019' },
     { name: '김지현', end: '09/20/2019' },
   ];
 
@@ -98,17 +102,17 @@
   data.forEach(function(entry) {
     var end = new Date(entry.end);
     var delta = Math.floor((end - new Date())/1000/60/60/24) + 1;
-    var dday;
 
+    var dday;
     if (delta == 0) { dday = 'D-day'; }
     else if (delta > 0) { dday = 'D-' + delta; }
     else { dday = 'D+' + (-delta); }
 
-    var html = format('<li{}>{}<br>{}<br><small>{}-{}-{}</small></li>',
+    document.write(
+      format('<li{}>{}<br>{}<br><small>{}-{}-{}</small></li>',
         delta < 0 ? ' class=done' : '', entry.name, dday,
-        end.getFullYear(), end.getMonth() + 1, end.getDate());
-
-    document.write(html);
+        end.getFullYear(), end.getMonth() + 1, end.getDate())
+    );
   });
   </script>
 </ul>
